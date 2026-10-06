@@ -203,10 +203,28 @@ h1 span {
   min-height: 480px;
 }
 
+/* FRAME FOTO PROFIL */
+.profile-frame {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+/* FOTO DI DALAM FRAME */
+.profile-frame img {
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+}
+
+/* GLOW */
 .glow {
   position: absolute;
-  width: 390px;
-  height: 390px;
+  width: 320px;
+  height: 320px;
   border-radius: 50%;
   background: radial-gradient(
     circle,
@@ -215,6 +233,7 @@ h1 span {
     transparent 70%
   );
   filter: blur(10px);
+
 }
 
 .profile {
