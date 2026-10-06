@@ -1,0 +1,19 @@
+PORTFOLIO GANGSAR WIJAYA — VERSI PRO
+
+1. Buka index.html.
+2. FOTO PROFIL:
+   Cari bagian .photo. Ganti isi placeholder dengan:
+   <img src="foto.jpg" alt="Foto Gangsar Wijaya" style="display:block">
+   lalu taruh foto.jpg di folder yang sama.
+3. ALAMAT:
+   Cari teks "[Tulis alamat kamu]" dan isi alamat yang ingin ditampilkan.
+4. PENDIDIKAN:
+   Ganti [Nama Sekolah], [Nama Jurusan], tahun, dan deskripsi sesuai riwayat asli.
+5. PERSENTASE KEAHLIAN:
+   Ubah angka pada skill, misalnya 90%, dan data-width="90%" menjadi angka yang sama.
+6. PROJECT:
+   Duplikasikan <article class="card project ..."> untuk menambah project.
+7. KONTAK:
+   WhatsApp: ganti 6281234567890 dengan nomor kamu (format internasional, tanpa +).
+   Instagram: ganti usernamekamu.
+   GitHub: ganti usernamekamu.

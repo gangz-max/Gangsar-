@@ -1,0 +1,13 @@
+PORTFOLIO GANGSAR WIJAYA
+
+Buka index.html di browser.
+
+PENTING:
+1. Ganti link WhatsApp:
+   https://wa.me/6281234567890
+   menjadi nomor WhatsApp kamu dengan format internasional, tanpa tanda + atau spasi.
+2. Ganti username Instagram pada link instagram.com/usernamekamu
+3. Ganti username GitHub pada link github.com/usernamekamu
+4. Area foto profil saat ini adalah placeholder. Untuk memakai foto asli, kamu bisa mengubah bagian .photo di index.html menjadi gambar:
+   <img src="foto.jpg" alt="Foto Gangsar Wijaya" style="width:100%;height:100%;object-fit:cover">
+   lalu letakkan foto.jpg di folder yang sama.
