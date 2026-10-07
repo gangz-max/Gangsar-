@@ -839,3 +839,783 @@ footer {
     display: none;
   }
 }
+/*EXPERIENCE*/
+
+.experience-section {
+  position: relative;
+}
+
+.experience-timeline {
+  position: relative;
+  max-width: 950px;
+  margin: 10px auto 0;
+}
+
+/* Garis tengah */
+.experience-timeline::before {
+  content: "";
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  left: 50%;
+
+  width: 2px;
+
+  transform: translateX(-50%);
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--blue),
+    var(--purple),
+    var(--pink),
+    transparent
+  );
+
+  opacity: 0.8;
+}
+
+/* Item */
+.experience-item {
+  position: relative;
+
+  width: 50%;
+
+  padding: 18px 42px;
+}
+
+.experience-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.experience-item:nth-child(even) {
+  left: 50%;
+}
+
+/* Titik timeline */
+.experience-dot {
+  position: absolute;
+
+  top: 29px;
+
+  width: 13px;
+  height: 13px;
+
+  border-radius: 50%;
+
+  background: var(--pink);
+
+  border: 3px solid var(--bg);
+
+  box-shadow:
+    0 0 0 5px rgba(236,114,184,0.10),
+    0 0 20px rgba(236,114,184,0.30);
+
+  z-index: 3;
+}
+
+.experience-item:nth-child(odd) .experience-dot {
+  right: -7px;
+}
+
+.experience-item:nth-child(even) .experience-dot {
+  left: -7px;
+}
+
+/* Card experience */
+.experience-card {
+  position: relative;
+
+  padding: 24px;
+
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(21,24,45,0.96),
+      rgba(13,16,31,0.96)
+    );
+
+  box-shadow: 0 15px 45px rgba(0,0,0,0.20);
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(139,92,246,0.35);
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.30),
+    0 0 25px rgba(139,92,246,0.07);
+}
+
+/* Tahun */
+.experience-date {
+  display: inline-block;
+
+  margin-bottom: 9px;
+
+  color: var(--purple-light);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+/* Judul */
+.experience-card h3 {
+  margin: 0 0 8px;
+
+  font: 600 19px "Space Grotesk", sans-serif;
+}
+
+/* Deskripsi */
+.experience-card p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+/* Tags */
+.experience-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+
+  margin-top: 15px;
+}
+
+.experience-item:nth-child(odd) .experience-tags {
+  justify-content: flex-end;
+}
+
+.experience-tag {
+  padding: 6px 10px;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.025);
+
+  color: #c9c6dc;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  transition: 0.25s ease;
+}
+
+.experience-tag:hover {
+  border-color: rgba(167,139,250,0.25);
+
+  background: rgba(139,92,246,0.08);
+
+  color: white;
+}
+
+
+/* =========================================================
+   ACHIEVEMENT
+   ========================================================= */
+
+.achievement-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+.achievement-card {
+  position: relative;
+
+  padding: 25px;
+
+  overflow: hidden;
+
+  border: 1px solid var(--line);
+
+  border-radius: var(--radius);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(21,24,45,0.96),
+      rgba(13,16,31,0.96)
+    );
+
+  box-shadow:
+    0 15px 45px rgba(0,0,0,0.20);
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Glow kecil di pojok */
+.achievement-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 150px;
+  height: 150px;
+
+  top: -80px;
+  right: -80px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(139,92,246,0.18),
+      transparent 70%
+    );
+}
+
+.achievement-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(167,139,250,0.30);
+
+  box-shadow:
+    var(--shadow),
+    0 0 30px rgba(139,92,246,0.08);
+}
+
+/* Icon */
+.achievement-icon {
+  width: 52px;
+  height: 52px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 18px;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  border-radius: 16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(79,124,255,0.15),
+      rgba(139,92,246,0.12)
+    );
+
+  font-size: 23px;
+
+  box-shadow:
+    inset 0 0 20px rgba(255,255,255,0.02);
+
+  transition: 0.3s ease;
+}
+
+.achievement-card:hover .achievement-icon {
+  transform: translateY(-3px);
+
+  border-color: rgba(167,139,250,0.25);
+
+  box-shadow:
+    0 8px 25px rgba(139,92,246,0.12);
+}
+
+/* Tahun */
+.achievement-year {
+  color: var(--pink-soft);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1.3px;
+
+  text-transform: uppercase;
+}
+
+/* Judul */
+.achievement-card h3 {
+  margin: 7px 0 8px;
+
+  font: 600 19px "Space Grotesk", sans-serif;
+}
+
+/* Deskripsi */
+.achievement-card p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   GALLERY
+   ========================================================= */
+
+.gallery {
+  display: grid;
+
+  grid-template-columns: repeat(12, 1fr);
+
+  grid-auto-rows: 170px;
+
+  gap: 14px;
+}
+
+/* Semua item gallery */
+.gallery-item {
+  position: relative;
+
+  overflow: hidden;
+
+  border: 1px solid var(--line);
+
+  border-radius: var(--radius);
+
+  background: var(--card);
+
+  cursor: pointer;
+
+  box-shadow:
+    0 12px 35px rgba(0,0,0,0.18);
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Layout gallery */
+.gallery-item:nth-child(1) {
+  grid-column: span 7;
+  grid-row: span 2;
+}
+
+.gallery-item:nth-child(2),
+.gallery-item:nth-child(3) {
+  grid-column: span 5;
+}
+
+.gallery-item:nth-child(4),
+.gallery-item:nth-child(5),
+.gallery-item:nth-child(6) {
+  grid-column: span 4;
+}
+
+/* Foto */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.55s ease,
+    filter 0.55s ease;
+}
+
+/* Overlay */
+.gallery-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: flex-end;
+
+  padding: 20px;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(8,9,20,0.94),
+      rgba(8,9,20,0.30),
+      transparent
+    );
+
+  opacity: 0;
+
+  transition: opacity 0.35s ease;
+}
+
+/* Hover gallery */
+.gallery-item:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(139,92,246,0.35);
+
+  box-shadow:
+    var(--shadow);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.07);
+
+  filter:
+    brightness(0.75)
+    saturate(1.08);
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+/* Judul foto */
+.gallery-overlay h3 {
+  margin: 0 0 5px;
+
+  font: 600 17px "Space Grotesk", sans-serif;
+}
+
+/* Deskripsi foto */
+.gallery-overlay p {
+  margin: 0;
+
+  color: #c0bed0;
+
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   LIGHTBOX FOTO
+   ========================================================= */
+
+.lightbox {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 200;
+
+  display: none;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 30px;
+
+  background:
+    rgba(4,5,12,0.88);
+
+  backdrop-filter: blur(14px);
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+/* Kotak foto */
+.lightbox-content {
+  position: relative;
+
+  width: min(900px, 95vw);
+
+  max-height: 90vh;
+
+  padding: 10px;
+
+  border: 1px solid var(--line);
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(21,24,45,0.98),
+      rgba(13,16,31,0.98)
+    );
+
+  box-shadow:
+    0 30px 100px rgba(0,0,0,0.60);
+
+  animation: lightboxIn 0.3s ease;
+}
+
+@keyframes lightboxIn {
+
+  from {
+    opacity: 0;
+
+    transform:
+      scale(0.94)
+      translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      scale(1)
+      translateY(0);
+  }
+}
+
+/* Foto besar */
+.lightbox img {
+  width: 100%;
+
+  max-height: 75vh;
+
+  display: block;
+
+  object-fit: contain;
+
+  border-radius: 17px;
+}
+
+/* Tombol close */
+.lightbox-close {
+  position: absolute;
+
+  top: -15px;
+  right: -15px;
+
+  width: 40px;
+  height: 40px;
+
+  display: grid;
+  place-items: center;
+
+  border: 1px solid var(--line);
+
+  border-radius: 50%;
+
+  background: var(--card);
+
+  color: white;
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.lightbox-close:hover {
+  transform: rotate(90deg);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--purple),
+      var(--pink)
+    );
+}
+
+
+/* =========================================================
+   TAMBAHAN NAVBAR
+   Supaya navbar tidak terlalu padat
+   ========================================================= */
+
+@media (min-width: 851px) and (max-width: 1150px) {
+
+  .navlinks a {
+    padding: 8px 8px;
+
+    font-size: 12px;
+  }
+
+}
+
+
+/* =========================================================
+   EXPERIENCE + GALLERY RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  /* EXPERIENCE */
+
+  .experience-timeline::before {
+    left: 8px;
+
+    transform: none;
+  }
+
+  .experience-item {
+
+    width: 100%;
+
+    left: 0 !important;
+
+    padding:
+      18px
+      10px
+      18px
+      35px;
+
+    text-align: left !important;
+  }
+
+  .experience-item .experience-dot {
+
+    left: 2px !important;
+
+    right: auto !important;
+  }
+
+  .experience-item:nth-child(odd) .experience-tags {
+
+    justify-content: flex-start;
+  }
+
+
+  /* ACHIEVEMENT */
+
+  .achievement-grid {
+
+    grid-template-columns: 1fr;
+  }
+
+
+  /* GALLERY */
+
+  .gallery {
+
+    grid-template-columns: repeat(2, 1fr);
+
+    grid-auto-rows: 180px;
+  }
+
+  .gallery-item:nth-child(1),
+  .gallery-item:nth-child(2),
+  .gallery-item:nth-child(3),
+  .gallery-item:nth-child(4),
+  .gallery-item:nth-child(5),
+  .gallery-item:nth-child(6) {
+
+    grid-column: span 1;
+
+    grid-row: span 1;
+  }
+
+  .gallery-item:nth-child(1) {
+
+    grid-column: span 2;
+  }
+}
+
+
+/* =========================================================
+   HP
+   ========================================================= */
+
+@media (max-width: 470px) {
+
+  /* EXPERIENCE */
+
+  .experience-card {
+
+    padding: 20px;
+  }
+
+  .experience-card h3 {
+
+    font-size: 18px;
+  }
+
+
+  /* ACHIEVEMENT */
+
+  .achievement-card {
+
+    padding: 21px;
+  }
+
+
+  /* GALLERY */
+
+  .gallery {
+
+    grid-template-columns: 1fr;
+
+    grid-auto-rows: 230px;
+  }
+
+  .gallery-item:nth-child(1) {
+
+    grid-column: span 1;
+  }
+
+  .gallery-overlay {
+
+    opacity: 1;
+  }
+
+  .gallery-item img {
+
+    filter: brightness(0.82);
+  }
+
+
+  /* LIGHTBOX */
+
+  .lightbox {
+
+    padding: 15px;
+  }
+
+  .lightbox-content {
+
+    padding: 6px;
+
+    border-radius: 18px;
+  }
+
+  .lightbox-close {
+
+    top: -10px;
+    right: -8px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE TOUCH
+   ========================================================= */
+
+@media (pointer: coarse) {
+
+  .gallery-item:hover {
+
+    transform: none;
+
+    box-shadow:
+      0 12px 35px rgba(0,0,0,0.18);
+  }
+
+}
+
+
